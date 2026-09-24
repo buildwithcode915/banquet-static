@@ -38,7 +38,7 @@ export function ImageSlider({ variant = 'gallery' }: { variant?: 'hero' | 'galle
 
   useEffect(() => {
     if (!playing || hovered || !visible) return;
-    const timer = window.setInterval(() => setActive((index) => (index + 1) % slides.length), 5500);
+    const timer = window.setInterval(() => setActive((index) => (index + 1) % slides.length), 3000);
     return () => window.clearInterval(timer);
   }, [playing, hovered, visible]);
 

@@ -1,3 +1,3 @@
 :HL["/_next/static/chunks/3w76ivusvnos_.css","style"]
 :HL["/assets/brand-mark.png","image"]
-0:{"tree":{"name":"","param":null,"prefetchHints":4176,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":4256,"slots":null}}},"staleTime":300,"buildId":"0LuEnQs1Qqo5yjxgLEeVW"}
+0:{"tree":{"name":"","param":null,"prefetchHints":4176,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":4256,"slots":null}}},"staleTime":300,"buildId":"2EuD85_LBknrPs5PIqgw6"}
