@@ -36,17 +36,13 @@ export function LanguageToggle() {
     const saved = window.localStorage.getItem('shyama-language') === 'hi';
     setHindi(saved);
     applyLanguage(saved);
-    const observer = new MutationObserver(() => {
-      if (document.documentElement.lang === 'hi') applyLanguage(true);
-    });
-    observer.observe(document.body, { childList: true, subtree: true });
-    return () => observer.disconnect();
   }, []);
 
   function changeLanguage(nextHindi: boolean) {
     setHindi(nextHindi);
     window.localStorage.setItem('shyama-language', nextHindi ? 'hi' : 'en');
     applyLanguage(nextHindi);
+    window.dispatchEvent(new CustomEvent('languagechange', { detail: { hindi: nextHindi } }));
   }
 
   return <div className="language-toggle" role="group" aria-label="Choose language">
