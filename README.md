@@ -23,6 +23,12 @@ npm run typecheck
 
 Upload the contents of `out/` to the domain's public root, including `_next/` and `assets/`. No Node server, database or API is needed on the host. `out/` is committed as a ready-to-upload deliverable; rebuild and commit it alongside source changes. Opening the HTML as a local file is not supported; use an HTTP server.
 
+## GitHub Pages
+
+The `main` branch includes `.github/workflows/deploy-pages.yml`. Every push builds the Next.js static export and publishes it to GitHub Pages. In the repository settings, set **Pages → Build and deployment → Source** to **GitHub Actions**. The first successful run will be available at `https://buildwithcode915.github.io/banquet-static/`.
+
+To use a custom subdomain such as `shayamautsavhall.navdeepraushan.in`, add that hostname under **Pages → Custom domain**, then create the DNS record Hostinger shows. GitHub will issue HTTPS after DNS points to Pages and the check completes. Do not add a `CNAME` file until the custom hostname is selected in Pages settings, because GitHub manages that file during the custom-domain setup.
+
 ## Features
 
 - Hero and gallery image sliders with optional play/pause, keyboard arrows, image selectors and touch swipe.
