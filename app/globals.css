@@ -30,6 +30,9 @@ p { color: var(--muted); }
 .header nav { display: flex; align-items: center; gap: 30px; font-size: 12px; }
 .nav-contact { padding: 11px 19px; border: 1px solid #bda982; border-radius: 30px; }
 .nav-contact span { margin-left: 16px; }
+.language-toggle { display: inline-flex; align-items: center; gap: 5px; color: #876e51; font-size: 10px; letter-spacing: .5px; }
+.language-toggle button { border: 0; background: transparent; color: inherit; cursor: pointer; padding: 4px 2px; border-bottom: 1px solid transparent; }
+.language-toggle button.is-active { color: var(--wine); border-color: #a98752; font-weight: 700; }
 .hero { display: grid; grid-template-columns: 1.06fr 1fr; align-items: center; gap: 30px; padding-top: 48px; padding-bottom: 54px; }
 .hero-copy { position: relative; z-index: 2; }
 .eyebrow { margin-bottom: 23px; color: var(--gold); font-size: 9px; font-weight: 600; letter-spacing: 2.1px; }
@@ -295,6 +298,27 @@ button:focus-visible, summary:focus-visible { outline: 3px solid #ad864c; outlin
 .faq-list details:first-child { border-top: 1px solid #cbbda7; }
 .faq-list summary { cursor: pointer; font-size: 14px; font-weight: 600; min-height: 24px; }
 .faq-list details p { padding-top: 16px; font-size: 13px; }
+.shloka-section { position: relative; overflow: hidden; padding: 105px 0; color: #f6ebd8; background: #251b2b; }
+.shloka-section::before { content: ''; position: absolute; inset: 0; background: radial-gradient(circle at 75% 40%, #68445466, transparent 35%), radial-gradient(circle at 10% 100%, #8f67372b, transparent 35%); }
+.shloka-mandala { position: absolute; right: 7%; top: 50%; width: 340px; height: 340px; border: 1px solid #d3ae6c33; border-radius: 50%; transform: translateY(-50%); opacity: .8; }
+.shloka-mandala::before, .shloka-mandala::after { content: ''; position: absolute; inset: 16px; border: 1px solid #d3ae6c2b; border-radius: 50%; }
+.shloka-mandala::after { inset: 50px; border-style: dashed; }
+.shloka-mandala span { position: absolute; inset: 0; display: grid; place-items: center; color: #dfbd7c; font: 115px Georgia, serif; opacity: .22; }
+.shloka-layout { position: relative; display: grid; grid-template-columns: .85fr 1.15fr; gap: 85px; align-items: center; }
+.shloka-section .eyebrow { color: #d8b77b; }
+.shloka-section em { color: #e0bd7d; }
+.shloka-intro { max-width: 390px; margin-top: 25px; color: #cbbec9; font-size: 13px; }
+.shloka-card { position: relative; min-height: 325px; display: flex; align-items: center; justify-content: center; flex-direction: column; padding: 54px 45px; border: 1px solid #cfa96880; border-radius: 4px; background: linear-gradient(140deg, #4a3045ee, #312334e8); box-shadow: 12px 15px 0 #b18a4b44; text-align: center; animation: shloka-in .75s cubic-bezier(.2,.7,.2,1) both; }
+.shloka-number { color: #d3b071; font-size: 8px; letter-spacing: 2px; }
+.sanskrit { margin-top: 28px; color: #f8e8c9; font: 31px/1.75 Georgia, 'Noto Serif Devanagari', serif; }
+.transliteration { margin-top: 9px; color: #d2bfaf; font: italic 14px/1.5 Georgia, serif; }
+.shloka-rule { width: 48px; height: 1px; margin: 24px 0 18px; background: #cda967; }
+.meaning { max-width: 470px; color: #e1d4cc; font: italic 16px/1.6 Georgia, serif; }
+.shloka-dots { display: flex; gap: 9px; margin-top: 33px; }
+.shloka-dots button { width: 36px; height: 30px; display: grid; place-items: center; border: 0; background: transparent; cursor: pointer; }
+.shloka-dots button span { width: 7px; height: 7px; border-radius: 50%; background: #8a7486; }
+.shloka-dots button[aria-selected=true] span { width: 25px; border-radius: 10px; background: #d7b376; }
+@keyframes shloka-in { from { opacity: 0; transform: translateY(20px) rotateX(5deg); } to { opacity: 1; transform: translateY(0) rotateX(0); } }
 @media (max-width: 760px) {
   .slider-hero { transform: none; margin: 20px 0 5px; }
   .slider-viewport, .slider-gallery .slider-viewport { height: 430px; }
@@ -302,6 +326,12 @@ button:focus-visible, summary:focus-visible { outline: 3px solid #ad864c; outlin
   .slider-dots button { min-width: 24px; }
   .slider-caption, .slider-gallery .slider-caption { left: 22px; bottom: 24px; }
   .planning-steps, .faq-layout { grid-template-columns: 1fr; gap: 30px; }
+  .shloka-layout { grid-template-columns: 1fr; gap: 35px; }
+  .shloka-section { padding: 65px 0; }
+  .shloka-mandala { width: 280px; height: 280px; right: -95px; top: 22%; }
+  .shloka-card { min-height: 295px; padding: 42px 21px; }
+  .sanskrit { font-size: 24px; }
 }
 @media (max-width: 370px) { .slider-controls .slider-play { padding: 0 5px; } .slider-arrows button { min-width: 38px; margin-left: 3px; } }
 @media (prefers-reduced-motion: reduce) { .slider-slide { transform: none; } }
+@media (prefers-reduced-motion: reduce) { .shloka-card { animation: none; } }
