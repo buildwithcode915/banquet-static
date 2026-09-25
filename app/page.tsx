@@ -3,9 +3,11 @@ import { PlanningGuide } from '../components/planning-guide';
 import { CelebrationGallery } from '../components/celebration-gallery';
 import { LanguageToggle } from '../components/language-toggle';
 import { ShlokaSection } from '../components/shloka-section';
+import { BusinessSchema } from '../components/business-schema';
 
 export default function Home() {
   return <>
+  <BusinessSchema />
   <a className="skip-link" href="#main">Skip to content</a>
   <div className="location-bar">SHYAMA COMPLEX <span>•</span> EKANGAR DIH, NALANDA</div>
   <header className="header">
@@ -14,7 +16,7 @@ export default function Home() {
   </header>
   <main id="main">
     <section className="hero wrap" id="home">
-      <div className="hero-copy"><p className="eyebrow" data-hi="आपका अवसर • आपके लोग • आपकी यादें">YOUR OCCASION. YOUR PEOPLE. YOUR MEMORIES.</p><h1 data-hi="कुछ पल<br />एक <em>खास जगह</em> के हक़दार होते हैं">Some moments<br />deserve a<br /><em>special place.</em></h1><p className="intro" data-hi="अपने प्रियजनों के साथ श्यामा उत्सव हॉल में खुशियाँ मनाएँ। शादियों, पारिवारिक मिलन और यादगार समारोहों के लिए एक खूबसूरत जगह।">Bring your loved ones together at Shyama Utsav Hall. A place for weddings, family gatherings, and the celebrations that mean the most.</p><div className="actions"><a className="button" href="#contact" data-hi="अपना समारोह तय करें ↗">Let’s plan your celebration <span aria-hidden="true">↗</span></a><a className="text-link" href="tel:+919934210304" data-hi="हमारी टीम को कॉल करें">Call our team</a></div><p className="hero-location" data-hi="आशीर्वाद अस्पताल के पास · एकंगर डीह, बिहार">Near Asirwad Hospital · Ekangar Dih, Bihar</p></div>
+      <div className="hero-copy"><p className="eyebrow" data-hi="आपका अवसर • आपके लोग • आपकी यादें">YOUR OCCASION. YOUR PEOPLE. YOUR MEMORIES.</p><h1 data-hi="नालंदा में<br />आपका <em>विवाह और समारोह स्थल।</em>">Your wedding &amp;<br />banquet hall<br /><em>in Nalanda.</em></h1><p className="intro" data-hi="अपने प्रियजनों के साथ श्यामा उत्सव हॉल में खुशियाँ मनाएँ। शादियों, पारिवारिक मिलन और यादगार समारोहों के लिए एक खूबसूरत जगह।">Bring your loved ones together at Shyama Utsav Hall. A place for weddings, family gatherings, and the celebrations that mean the most.</p><div className="actions"><a className="button" href="#contact" data-hi="अपना समारोह तय करें ↗">Let’s plan your celebration <span aria-hidden="true">↗</span></a><a className="text-link" href="tel:+919934210304" data-hi="हमारी टीम को कॉल करें">Call our team</a></div><p className="hero-location" data-hi="आशीर्वाद अस्पताल के पास · एकंगर डीह, बिहार">Near Asirwad Hospital · Ekangar Dih, Bihar</p></div>
       <ImageSlider variant="hero" /></section>
     <div className="occasion-strip" aria-label="Celebrations"><span>Weddings</span><b aria-hidden="true">✧</b><span>Receptions</span><b aria-hidden="true">✧</b><span>Engagements</span><b aria-hidden="true">✧</b><span>Family celebrations</span></div>
     <section className="section wrap venue" id="venue"><div><p className="eyebrow" data-hi="श्यामा उत्सव हॉल में आपका स्वागत है">WELCOME TO SHYAMA UTSAV HALL</p><h2 data-hi="घर के पास।<br /><em>दिल के करीब।</em>">Close to home.<br /><em>Close to your heart.</em></h2></div><div><p className="body-large" data-hi="आपका समारोह एक बातचीत से शुरू होता है।">Your celebration starts with a conversation.</p><p data-hi="नालंदा के एकंगर डीह स्थित श्यामा कॉम्प्लेक्स में हमारा हॉल शादियों, रिसेप्शन, सगाई, जन्मदिन और पारिवारिक समारोहों के लिए उपलब्ध है।">Located at Shyama Complex in Ekangar Dih, Nalanda, our hall welcomes enquiries for weddings, receptions, engagements, birthdays, and family functions.</p><p data-hi="अपनी तारीख, मेहमानों की संख्या और अपनी ज़रूरतें हमें बताएँ। हमारी टीम हॉल, बैठने की व्यवस्था और सेवा विकल्पों पर आपकी मदद करेगी।">Tell us your date, guest count, and what you have in mind. Our team will help you discuss the hall, seating arrangements, and service options for your occasion.</p><a className="text-link" href="#contact" data-hi="जगह देखने आएँ ↗">Come and see the space <span aria-hidden="true">↗</span></a></div></section>

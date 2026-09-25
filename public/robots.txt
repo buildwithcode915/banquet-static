@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://shyamautsavhall.navdeepraushan.in/sitemap.xml
